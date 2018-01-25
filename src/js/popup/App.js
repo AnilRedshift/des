@@ -9,6 +9,19 @@ class App extends Component {
       regex: '',
       replacement: '',
     };
+    chrome.storage.local.get(['regex', 'replacement'], ({regex='', replacement=''}) => {
+      this.setState((oldState) => {
+        if (oldState.regex === oldState.replacement === '') {
+          return {regex, replacement}
+        } else {
+          return oldState;
+        }
+      });
+    });
+  }
+
+  componentDidUpdate() {
+    chrome.storage.local.set(this.state);
   }
 
   onChange(name, e) {
