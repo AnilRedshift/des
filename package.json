@@ -2,6 +2,7 @@
   "name": "des",
   "version": "0.0.1",
   "description": "A better stream editor",
+  "license": "MIT",
   "scripts": {
     "build": "node utils/build.js",
     "start": "node utils/webserver.js"
