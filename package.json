@@ -7,24 +7,31 @@
     "start": "node utils/webserver.js"
   },
   "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.16.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.41.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.2.0",
-    "style-loader": "^0.13.0",
-    "webpack": "2.2.1",
+    "style-loader": "^0.19.1",
+    "webpack": "3.10.0",
     "webpack-dev-server": "^2.3.0",
-    "write-file-webpack-plugin": "3.4.2",
+    "write-file-webpack-plugin": "4.2.0",
     "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.4",
+    "babel-loader": "^7.1.2",
     "babel-preset-react": "^6.16.0",
     "babel-preset-react-hmre": "^1.1.1",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.11.2",
-    "fs-extra": "^0.30.0",
-    "html-loader": "^0.4.5",
-    "html-webpack-plugin": "2.24.1"
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
+    "fs-extra": "^5.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "2.30.1"
   }
 }
