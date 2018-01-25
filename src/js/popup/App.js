@@ -5,7 +5,7 @@ class App extends Component {
     super();
     this.onRegexChange = this.onChange.bind(this, 'regex');
     this.onReplacementChange = this.onChange.bind(this, 'replacement');
-    this.onClose = this.onClose.bind(this);
+    this.onSave = this.onSave.bind(this);
     this.state = {
       regex: '',
       replacement: '',
@@ -21,15 +21,11 @@ class App extends Component {
     });
   }
 
-  componentDidUpdate() {
-    chrome.storage.local.set(this.state);
-  }
-
   onChange(name, e) {
     this.setState({[name]: e.target.value});
   }
 
-  onClose() {
+  onSave() {
     this.setState((prevState) => {
       chrome.storage.local.set(prevState, () => {
         window.close();
@@ -44,7 +40,7 @@ class App extends Component {
         <input type="text" value={this.state.regex} onChange={this.onRegexChange}></input>
         <h3>Replacement text</h3>
         <input type="text" value={this.state.replacement} onChange={this.onReplacementChange}></input>
-        <button onClick={this.onClose}>Close</button>
+        <button onClick={this.onSave}>Save</button>
       </div>
     );
   }
